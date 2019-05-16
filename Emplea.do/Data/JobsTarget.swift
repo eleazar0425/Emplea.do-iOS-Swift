@@ -33,6 +33,25 @@ enum JobsTarget {
             return "SystemAdministrator"
         }
     }
+    
+    static func instantiate(page: Int, rawValue: String) -> JobsTarget? {
+        switch rawValue{
+        case "NONE":
+            return .getJobs(page: page)
+        case "SoftwareDevelopment":
+            return .getSoftwareDevelopmentJobs(page: page)
+        case "WebDevelopment":
+            return .getWebDevelopmentJobs(page: page)
+        case "MobileDevelopment":
+            return .getMobileDevelopmentJobs(page: page)
+        case "Networking":
+            return .getNetworkingJobs(page: page)
+        case "SystemAdministrator":
+            return .getSystemAdminJobs(page: page)
+        default:
+            return nil
+        }
+    }
 }
 
 extension JobsTarget: TargetType {
