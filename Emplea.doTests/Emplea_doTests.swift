@@ -7,28 +7,20 @@
 //
 
 import XCTest
+import Nimble
+import Quick
+
 @testable import Emplea_do
 
-class Emplea_doTests: XCTestCase {
-
-    override func setUp() {
-        // Put setup code here. This method is called before the invocation of each test method in the class.
-    }
-
-    override func tearDown() {
-        // Put teardown code here. This method is called after the invocation of each test method in the class.
-    }
-
-    func testExample() {
-        // This is an example of a functional test case.
-        // Use XCTAssert and related functions to verify your tests produce the correct results.
-    }
-
-    func testPerformanceExample() {
-        // This is an example of a performance test case.
-        self.measure {
-            // Put the code you want to measure the time of here.
+class Emplea_doTests: QuickSpec {
+    override func spec() {
+        describe("When target is created with filter's raw value") {
+            let filter = FilterBy.softwareDevelopment
+            let target = JobTarget.instantiate(page: 1, rawValue: filter.rawValue)
+            
+            it("should match filter raw value"){
+                expect(target!.identifier).to(equal(filter.rawValue))
+            }
         }
     }
-
 }
