@@ -13,6 +13,10 @@
 		10877B47228DEA9B00ED003C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 10877B46228DEA9B00ED003C /* Assets.xcassets */; };
 		10877B4A228DEA9B00ED003C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 10877B48228DEA9B00ED003C /* LaunchScreen.storyboard */; };
 		10877B55228DEA9C00ED003C /* Emplea_doTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10877B54228DEA9C00ED003C /* Emplea_doTests.swift */; };
+		10877B61228DEC2000ED003C /* JobsTarget.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10877B60228DEC2000ED003C /* JobsTarget.swift */; };
+		10877B63228DF37900ED003C /* JobsService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10877B62228DF37900ED003C /* JobsService.swift */; };
+		10877B65228DF3B300ED003C /* JobsDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10877B64228DF3B300ED003C /* JobsDataSource.swift */; };
+		10877B69228DF3D500ED003C /* FilterBy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10877B68228DF3D500ED003C /* FilterBy.swift */; };
 		15E384213BA5717EDD624F88 /* Pods_Emplea_do.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 330FDC7CAED805B50E3F6105 /* Pods_Emplea_do.framework */; };
 		F4CE0091B7330601B160BFA7 /* Pods_Emplea_doTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CAFF8AE727D3F85A4B2CA93A /* Pods_Emplea_doTests.framework */; };
 /* End PBXBuildFile section */
@@ -38,6 +42,10 @@
 		10877B50228DEA9C00ED003C /* Emplea.doTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = Emplea.doTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		10877B54228DEA9C00ED003C /* Emplea_doTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Emplea_doTests.swift; sourceTree = "<group>"; };
 		10877B56228DEA9C00ED003C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		10877B60228DEC2000ED003C /* JobsTarget.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JobsTarget.swift; sourceTree = "<group>"; };
+		10877B62228DF37900ED003C /* JobsService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JobsService.swift; sourceTree = "<group>"; };
+		10877B64228DF3B300ED003C /* JobsDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JobsDataSource.swift; sourceTree = "<group>"; };
+		10877B68228DF3D500ED003C /* FilterBy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilterBy.swift; sourceTree = "<group>"; };
 		330FDC7CAED805B50E3F6105 /* Pods_Emplea_do.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Emplea_do.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		48C6F3FCDC48EA8277007FDF /* Pods-Emplea.doTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Emplea.doTests.release.xcconfig"; path = "Target Support Files/Pods-Emplea.doTests/Pods-Emplea.doTests.release.xcconfig"; sourceTree = "<group>"; };
 		BF240DC79CC4E28E8F78EC2E /* Pods-Emplea.do.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Emplea.do.release.xcconfig"; path = "Target Support Files/Pods-Emplea.do/Pods-Emplea.do.release.xcconfig"; sourceTree = "<group>"; };
@@ -89,6 +97,7 @@
 		10877B3E228DEA9900ED003C /* Emplea.do */ = {
 			isa = PBXGroup;
 			children = (
+				10877B66228DF3C100ED003C /* Util */,
 				10877B5F228DEAAE00ED003C /* Data */,
 				10877B3F228DEA9900ED003C /* AppDelegate.swift */,
 				10877B41228DEA9900ED003C /* ViewController.swift */,
@@ -112,8 +121,27 @@
 		10877B5F228DEAAE00ED003C /* Data */ = {
 			isa = PBXGroup;
 			children = (
+				10877B60228DEC2000ED003C /* JobsTarget.swift */,
+				10877B62228DF37900ED003C /* JobsService.swift */,
+				10877B64228DF3B300ED003C /* JobsDataSource.swift */,
 			);
 			path = Data;
+			sourceTree = "<group>";
+		};
+		10877B66228DF3C100ED003C /* Util */ = {
+			isa = PBXGroup;
+			children = (
+				10877B67228DF3C800ED003C /* Enums */,
+			);
+			path = Util;
+			sourceTree = "<group>";
+		};
+		10877B67228DF3C800ED003C /* Enums */ = {
+			isa = PBXGroup;
+			children = (
+				10877B68228DF3D500ED003C /* FilterBy.swift */,
+			);
+			path = Enums;
 			sourceTree = "<group>";
 		};
 		4DE8B46B98A62AB3F9694F01 /* Frameworks */ = {
@@ -133,7 +161,6 @@
 				FDEA8EA497DD6B9F739BC9A8 /* Pods-Emplea.doTests.debug.xcconfig */,
 				48C6F3FCDC48EA8277007FDF /* Pods-Emplea.doTests.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -148,6 +175,7 @@
 				10877B38228DEA9900ED003C /* Sources */,
 				10877B39228DEA9900ED003C /* Frameworks */,
 				10877B3A228DEA9900ED003C /* Resources */,
+				75D5B53305B30A2754D5C69F /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -166,6 +194,7 @@
 				10877B4C228DEA9C00ED003C /* Sources */,
 				10877B4D228DEA9C00ED003C /* Frameworks */,
 				10877B4E228DEA9C00ED003C /* Resources */,
+				C62DE40A1E25727EDE994D3A /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -236,6 +265,44 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
+		75D5B53305B30A2754D5C69F /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Emplea.do/Pods-Emplea.do-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Action/Action.framework",
+				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
+				"${BUILT_PRODUCTS_DIR}/ModelMapper/Mapper.framework",
+				"${BUILT_PRODUCTS_DIR}/Moya/Moya.framework",
+				"${BUILT_PRODUCTS_DIR}/Moya-ModelMapper/Moya_ModelMapper.framework",
+				"${BUILT_PRODUCTS_DIR}/Nuke/Nuke.framework",
+				"${BUILT_PRODUCTS_DIR}/Result/Result.framework",
+				"${BUILT_PRODUCTS_DIR}/RxCocoa/RxCocoa.framework",
+				"${BUILT_PRODUCTS_DIR}/RxSwift/RxSwift.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Action.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Mapper.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Moya.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Moya_ModelMapper.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Nuke.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Result.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxCocoa.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxSwift.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Emplea.do/Pods-Emplea.do-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 		B765B3B9900919B43407599A /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -256,6 +323,34 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		C62DE40A1E25727EDE994D3A /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Emplea.doTests/Pods-Emplea.doTests-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/RxSwift/RxSwift.framework",
+				"${BUILT_PRODUCTS_DIR}/Nimble/Nimble.framework",
+				"${BUILT_PRODUCTS_DIR}/Quick/Quick.framework",
+				"${BUILT_PRODUCTS_DIR}/RxTest/RxTest.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxSwift.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Nimble.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Quick.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxTest.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Emplea.doTests/Pods-Emplea.doTests-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		FD0639B832DEA9BD4BFAB614 /* [CP] Check Pods Manifest.lock */ = {
@@ -287,8 +382,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				10877B65228DF3B300ED003C /* JobsDataSource.swift in Sources */,
 				10877B42228DEA9900ED003C /* ViewController.swift in Sources */,
+				10877B69228DF3D500ED003C /* FilterBy.swift in Sources */,
+				10877B61228DEC2000ED003C /* JobsTarget.swift in Sources */,
 				10877B40228DEA9900ED003C /* AppDelegate.swift in Sources */,
+				10877B63228DF37900ED003C /* JobsService.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
