@@ -9,7 +9,7 @@
 import Foundation
 import Moya
 
-enum JobsTarget {
+enum JobTarget {
     case getJobs(page: Int)
     case getSoftwareDevelopmentJobs(page: Int)
     case getWebDevelopmentJobs(page: Int)
@@ -34,7 +34,7 @@ enum JobsTarget {
         }
     }
     
-    static func instantiate(page: Int, rawValue: String) -> JobsTarget? {
+    static func instantiate(page: Int, rawValue: String) -> JobTarget? {
         switch rawValue{
         case "NONE":
             return .getJobs(page: page)
@@ -54,7 +54,7 @@ enum JobsTarget {
     }
 }
 
-extension JobsTarget: TargetType {
+extension JobTarget: TargetType {
     
     var defaultPageSize: Int {
         return 12

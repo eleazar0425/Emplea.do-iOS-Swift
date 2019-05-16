@@ -11,16 +11,16 @@ import RxSwift
 import Moya
 import Moya_ModelMapper
 
-class JobsService: JobsDataSource {
+class JobsService: JobDataSource {
     
-    var provider: MoyaProvider<JobsTarget>
+    var provider: MoyaProvider<JobTarget>
     
-    init(provider: MoyaProvider<JobsTarget> = MoyaProvider<JobsTarget>()){
+    init(provider: MoyaProvider<JobTarget> = MoyaProvider<JobTarget>()){
         self.provider = provider
     }
     
     func getJobs(page: Int, filterBy: FilterBy) -> Observable<[Job]> {
-        guard let target = JobsTarget.instantiate(page: page, rawValue: filterBy.rawValue) else { fatalError("Invalid or unsoported filter provided") }
+        guard let target = JobTarget.instantiate(page: page, rawValue: filterBy.rawValue) else { fatalError("Invalid or unsoported filter provided") }
         
         return provider.rx.request(target)
             .retry(2)
