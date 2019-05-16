@@ -13,7 +13,7 @@ import Moya_ModelMapper
 
 
 class JobsService: JobsDataSource {
-    func getJobs(page: Int, filterBy: FilterBy) -> Observable<Any> {
-        
+    func getJobs(page: Int, filterBy: FilterBy) -> Observable<[Job]> {
+        return Observable.just([])
     }
 }
