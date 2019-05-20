@@ -20,8 +20,7 @@ class JobsService: JobDataSource {
     }
     
     func getJobs(page: Int, filterBy: FilterBy) -> Observable<[Job]> {
-        guard let target = JobTarget.instantiate(page: page, rawValue: filterBy.rawValue) else { fatalError("Invalid or unsoported filter provided") }
-        
+        let target = JobTarget.getJobs(page: page, filterBy: filterBy)
         return provider.rx.request(target)
             .retry(2)
             .map(to: [Job].self)
