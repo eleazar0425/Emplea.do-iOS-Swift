@@ -24,6 +24,7 @@
 		10877B83229458C900ED003C /* JobsTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 10877B81229458C900ED003C /* JobsTableViewCell.xib */; };
 		10877B8622945B3500ED003C /* UILabel+AddImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10877B8522945B3500ED003C /* UILabel+AddImage.swift */; };
 		10877B882294600600ED003C /* NibIndentifiable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10877B872294600600ED003C /* NibIndentifiable.swift */; };
+		10877B8A2294777A00ED003C /* JobsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10877B892294777A00ED003C /* JobsViewModel.swift */; };
 		15E384213BA5717EDD624F88 /* Pods_Emplea_do.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 330FDC7CAED805B50E3F6105 /* Pods_Emplea_do.framework */; };
 		F4CE0091B7330601B160BFA7 /* Pods_Emplea_doTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CAFF8AE727D3F85A4B2CA93A /* Pods_Emplea_doTests.framework */; };
 /* End PBXBuildFile section */
@@ -60,6 +61,7 @@
 		10877B81229458C900ED003C /* JobsTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = JobsTableViewCell.xib; sourceTree = "<group>"; };
 		10877B8522945B3500ED003C /* UILabel+AddImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UILabel+AddImage.swift"; sourceTree = "<group>"; };
 		10877B872294600600ED003C /* NibIndentifiable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NibIndentifiable.swift; sourceTree = "<group>"; };
+		10877B892294777A00ED003C /* JobsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JobsViewModel.swift; sourceTree = "<group>"; };
 		330FDC7CAED805B50E3F6105 /* Pods_Emplea_do.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Emplea_do.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		48C6F3FCDC48EA8277007FDF /* Pods-Emplea.doTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Emplea.doTests.release.xcconfig"; path = "Target Support Files/Pods-Emplea.doTests/Pods-Emplea.doTests.release.xcconfig"; sourceTree = "<group>"; };
 		BF240DC79CC4E28E8F78EC2E /* Pods-Emplea.do.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Emplea.do.release.xcconfig"; path = "Target Support Files/Pods-Emplea.do/Pods-Emplea.do.release.xcconfig"; sourceTree = "<group>"; };
@@ -183,6 +185,7 @@
 				10877B7F229458B200ED003C /* ViewCell */,
 				10877B7B229458AD00ED003C /* JobsViewController.swift */,
 				10877B7C229458AD00ED003C /* JobsViewController.xib */,
+				10877B892294777A00ED003C /* JobsViewModel.swift */,
 			);
 			path = Jobs;
 			sourceTree = "<group>";
@@ -339,12 +342,14 @@
 				"${PODS_ROOT}/Target Support Files/Pods-Emplea.do/Pods-Emplea.do-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/Action/Action.framework",
 				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
+				"${BUILT_PRODUCTS_DIR}/Differentiator/Differentiator.framework",
 				"${BUILT_PRODUCTS_DIR}/ModelMapper/Mapper.framework",
 				"${BUILT_PRODUCTS_DIR}/Moya/Moya.framework",
 				"${BUILT_PRODUCTS_DIR}/Moya-ModelMapper/Moya_ModelMapper.framework",
 				"${BUILT_PRODUCTS_DIR}/Nuke/Nuke.framework",
 				"${BUILT_PRODUCTS_DIR}/Result/Result.framework",
 				"${BUILT_PRODUCTS_DIR}/RxCocoa/RxCocoa.framework",
+				"${BUILT_PRODUCTS_DIR}/RxDataSources/RxDataSources.framework",
 				"${BUILT_PRODUCTS_DIR}/RxSwift/RxSwift.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
@@ -353,12 +358,14 @@
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Action.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Differentiator.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Mapper.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Moya.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Moya_ModelMapper.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Nuke.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Result.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxCocoa.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxDataSources.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxSwift.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -445,6 +452,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				10877B8A2294777A00ED003C /* JobsViewModel.swift in Sources */,
 				10877B7D229458AD00ED003C /* JobsViewController.swift in Sources */,
 				10877B65228DF3B300ED003C /* JobDataSource.swift in Sources */,
 				10877B42228DEA9900ED003C /* ViewController.swift in Sources */,

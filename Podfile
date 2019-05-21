@@ -12,6 +12,7 @@ target 'Emplea.do' do
   pod 'Action'
   pod 'RxCocoa'
   pod 'Nuke'
+  pod 'RxDataSources'
 
   target 'Emplea.doTests' do
     inherit! :search_paths
