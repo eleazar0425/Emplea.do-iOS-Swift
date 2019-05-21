@@ -18,6 +18,12 @@
 		10877B65228DF3B300ED003C /* JobDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10877B64228DF3B300ED003C /* JobDataSource.swift */; };
 		10877B69228DF3D500ED003C /* FilterBy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10877B68228DF3D500ED003C /* FilterBy.swift */; };
 		10877B6C228DF5C700ED003C /* Job.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10877B6B228DF5C700ED003C /* Job.swift */; };
+		10877B7D229458AD00ED003C /* JobsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10877B7B229458AD00ED003C /* JobsViewController.swift */; };
+		10877B7E229458AD00ED003C /* JobsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 10877B7C229458AD00ED003C /* JobsViewController.xib */; };
+		10877B82229458C900ED003C /* JobsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10877B80229458C900ED003C /* JobsTableViewCell.swift */; };
+		10877B83229458C900ED003C /* JobsTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 10877B81229458C900ED003C /* JobsTableViewCell.xib */; };
+		10877B8622945B3500ED003C /* UILabel+AddImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10877B8522945B3500ED003C /* UILabel+AddImage.swift */; };
+		10877B882294600600ED003C /* NibIndentifiable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10877B872294600600ED003C /* NibIndentifiable.swift */; };
 		15E384213BA5717EDD624F88 /* Pods_Emplea_do.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 330FDC7CAED805B50E3F6105 /* Pods_Emplea_do.framework */; };
 		F4CE0091B7330601B160BFA7 /* Pods_Emplea_doTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CAFF8AE727D3F85A4B2CA93A /* Pods_Emplea_doTests.framework */; };
 /* End PBXBuildFile section */
@@ -48,6 +54,12 @@
 		10877B64228DF3B300ED003C /* JobDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JobDataSource.swift; sourceTree = "<group>"; };
 		10877B68228DF3D500ED003C /* FilterBy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilterBy.swift; sourceTree = "<group>"; };
 		10877B6B228DF5C700ED003C /* Job.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Job.swift; sourceTree = "<group>"; };
+		10877B7B229458AD00ED003C /* JobsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JobsViewController.swift; sourceTree = "<group>"; };
+		10877B7C229458AD00ED003C /* JobsViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = JobsViewController.xib; sourceTree = "<group>"; };
+		10877B80229458C900ED003C /* JobsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JobsTableViewCell.swift; sourceTree = "<group>"; };
+		10877B81229458C900ED003C /* JobsTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = JobsTableViewCell.xib; sourceTree = "<group>"; };
+		10877B8522945B3500ED003C /* UILabel+AddImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UILabel+AddImage.swift"; sourceTree = "<group>"; };
+		10877B872294600600ED003C /* NibIndentifiable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NibIndentifiable.swift; sourceTree = "<group>"; };
 		330FDC7CAED805B50E3F6105 /* Pods_Emplea_do.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Emplea_do.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		48C6F3FCDC48EA8277007FDF /* Pods-Emplea.doTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Emplea.doTests.release.xcconfig"; path = "Target Support Files/Pods-Emplea.doTests/Pods-Emplea.doTests.release.xcconfig"; sourceTree = "<group>"; };
 		BF240DC79CC4E28E8F78EC2E /* Pods-Emplea.do.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Emplea.do.release.xcconfig"; path = "Target Support Files/Pods-Emplea.do/Pods-Emplea.do.release.xcconfig"; sourceTree = "<group>"; };
@@ -99,9 +111,10 @@
 		10877B3E228DEA9900ED003C /* Emplea.do */ = {
 			isa = PBXGroup;
 			children = (
-				10877B6A228DF5BB00ED003C /* Model */,
-				10877B66228DF3C100ED003C /* Util */,
 				10877B5F228DEAAE00ED003C /* Data */,
+				10877B6A228DF5BB00ED003C /* Model */,
+				10877B792294587E00ED003C /* UI */,
+				10877B66228DF3C100ED003C /* Util */,
 				10877B3F228DEA9900ED003C /* AppDelegate.swift */,
 				10877B41228DEA9900ED003C /* ViewController.swift */,
 				10877B43228DEA9900ED003C /* Main.storyboard */,
@@ -134,6 +147,7 @@
 		10877B66228DF3C100ED003C /* Util */ = {
 			isa = PBXGroup;
 			children = (
+				10877B8422945B2400ED003C /* Extensions */,
 				10877B67228DF3C800ED003C /* Enums */,
 			);
 			path = Util;
@@ -153,6 +167,42 @@
 				10877B6B228DF5C700ED003C /* Job.swift */,
 			);
 			path = Model;
+			sourceTree = "<group>";
+		};
+		10877B792294587E00ED003C /* UI */ = {
+			isa = PBXGroup;
+			children = (
+				10877B7A2294589400ED003C /* Jobs */,
+			);
+			path = UI;
+			sourceTree = "<group>";
+		};
+		10877B7A2294589400ED003C /* Jobs */ = {
+			isa = PBXGroup;
+			children = (
+				10877B7F229458B200ED003C /* ViewCell */,
+				10877B7B229458AD00ED003C /* JobsViewController.swift */,
+				10877B7C229458AD00ED003C /* JobsViewController.xib */,
+			);
+			path = Jobs;
+			sourceTree = "<group>";
+		};
+		10877B7F229458B200ED003C /* ViewCell */ = {
+			isa = PBXGroup;
+			children = (
+				10877B80229458C900ED003C /* JobsTableViewCell.swift */,
+				10877B81229458C900ED003C /* JobsTableViewCell.xib */,
+			);
+			path = ViewCell;
+			sourceTree = "<group>";
+		};
+		10877B8422945B2400ED003C /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				10877B8522945B3500ED003C /* UILabel+AddImage.swift */,
+				10877B872294600600ED003C /* NibIndentifiable.swift */,
+			);
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 		4DE8B46B98A62AB3F9694F01 /* Frameworks */ = {
@@ -260,9 +310,11 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				10877B7E229458AD00ED003C /* JobsViewController.xib in Resources */,
 				10877B4A228DEA9B00ED003C /* LaunchScreen.storyboard in Resources */,
 				10877B47228DEA9B00ED003C /* Assets.xcassets in Resources */,
 				10877B45228DEA9900ED003C /* Main.storyboard in Resources */,
+				10877B83229458C900ED003C /* JobsTableViewCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -393,11 +445,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				10877B7D229458AD00ED003C /* JobsViewController.swift in Sources */,
 				10877B65228DF3B300ED003C /* JobDataSource.swift in Sources */,
 				10877B42228DEA9900ED003C /* ViewController.swift in Sources */,
 				10877B69228DF3D500ED003C /* FilterBy.swift in Sources */,
+				10877B882294600600ED003C /* NibIndentifiable.swift in Sources */,
 				10877B61228DEC2000ED003C /* JobTarget.swift in Sources */,
 				10877B40228DEA9900ED003C /* AppDelegate.swift in Sources */,
+				10877B8622945B3500ED003C /* UILabel+AddImage.swift in Sources */,
+				10877B82229458C900ED003C /* JobsTableViewCell.swift in Sources */,
 				10877B6C228DF5C700ED003C /* Job.swift in Sources */,
 				10877B63228DF37900ED003C /* JobService.swift in Sources */,
 			);
