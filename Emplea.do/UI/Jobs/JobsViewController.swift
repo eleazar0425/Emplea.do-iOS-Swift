@@ -9,21 +9,10 @@
 import UIKit
 import RxSwift
 import RxCocoa
-import RxDataSources
 
 class JobsViewController: UIViewController {
     
     var viewModel: JobsViewModelType!
-    
-    private var tableViewDataSource: RxTableViewSectionedReloadDataSource<SectionModel<String, Job>>.ConfigureCell {
-        return { _ , tableView, indexPath, cellModel in
-            let cell = tableView.dequeueReusableCell(withIdentifier: "JobsTableViewCell", for: indexPath) as! JobsTableViewCell
-            cell.bind(job: cellModel)
-            
-            return cell
-        }
-    }
-    private var dataSource: RxTableViewSectionedReloadDataSource<SectionModel<String, Job>>!
     
     var disposeBag = DisposeBag()
     
@@ -37,15 +26,18 @@ class JobsViewController: UIViewController {
         tableView.rowHeight = 184
         tableView.register(UINib(nibName: "JobsTableViewCell", bundle: nil), forCellReuseIdentifier: "JobsTableViewCell")
         
-        dataSource = RxTableViewSectionedReloadDataSource<SectionModel<String, Job>>(
-            configureCell: tableViewDataSource
-        )
+        let outputs = viewModel.outputs
+        let inputs = viewModel.inputs
         
-        viewModel
-            .outputs
-            .jobs
-            .map { [SectionModel(model: "", items: $0)] }
-            .bind(to: tableView.rx.items(dataSource: dataSource))
+        outputs.jobs.bind(to: tableView.rx.items(cellIdentifier: "JobsTableViewCell", cellType: JobsTableViewCell.self )) { row, job, cell in
+            cell.bind(job: job)
+        }.disposed(by: disposeBag)
+        
+        
+        tableView.rx
+            .reachedBottom()
+            .skipUntil(outputs.isLoading)
+            .bind(to: inputs.loadMore)
             .disposed(by: disposeBag)
     }
 

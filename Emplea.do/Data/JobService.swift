@@ -22,8 +22,12 @@ class JobsService: JobDataSource {
     func getJobs(page: Int, filterBy: FilterBy) -> Observable<[Job]> {
         let target = JobTarget.getJobs(page: page, filterBy: filterBy)
         return provider.rx.request(target)
-            .retry(2)
+            .retry(3)
             .map(to: [Job].self)
             .asObservable()
+            .catchError({ error -> Observable<[Job]> in
+                print(error)
+                return .just([])
+            })
     }
 }

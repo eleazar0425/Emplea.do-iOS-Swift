@@ -73,27 +73,27 @@ class JobsViewModel: JobsVieModelInput, JobsViewModelOutput, JobsViewModelType {
     init(service: JobsService = JobsService()){
         self.service = service
         
-         var currentPage = 1
-        
         isLoading = isLoadingProperty.asObservable()
         filterBy = filterByProperty.asObservable()
         
         let firstRequest = Observable.combineLatest(isLoading, filterBy)
-            .flatMapLatest { isLoading, filterBy -> Observable<[Job]> in
+            .flatMapLatest { [unowned self] isLoading, filterBy -> Observable<[Job]> in
                 guard isLoading else { return .empty() }
-                return service.getJobs(page: 1, filterBy: filterBy)
+                return self.service.getJobs(page: self.currentPage, filterBy: filterBy)
         }
         
         let nextRequest = Observable.combineLatest(loadMore, filterBy)
-            .flatMapLatest { loadMore, filterBy -> Observable<[Job]> in
+            .flatMapLatest { [unowned self] loadMore, filterBy -> Observable<[Job]> in
                 guard loadMore else { return .empty() }
-                currentPage+=1
-                return service.getJobs(page: currentPage, filterBy: filterBy)
+                self.currentPage+=1
+                return self.service.getJobs(page: self.currentPage, filterBy: filterBy)
         }
         
         jobs = Observable.merge(firstRequest, nextRequest)
             .map{ [unowned self] jobs -> [Job] in
-                self.jobsArray += jobs
+                for job in jobs {
+                    self.jobsArray.append(job)
+                }
                 self.isLoadingProperty.onNext(false)
                 return self.jobsArray
         }

@@ -43,7 +43,7 @@ extension JobTarget: TargetType {
         switch self{
         case let .getJobs(page, filterBy):
             return .requestParameters(parameters: [
-            "Page": page,
+            "page": page,
             "PageSize": defaultPageSize,
             "JobCategory": filterBy.rawValue], encoding: URLEncoding.queryString)
         }
