@@ -21,6 +21,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         let jobsViewController = JobsViewController.initFromNib()
         
+        let viewModel = JobsViewModel()
+        
+        jobsViewController.viewModel = viewModel
+        
         let rootViewController = UINavigationController(rootViewController: jobsViewController)
         
         window?.rootViewController = rootViewController

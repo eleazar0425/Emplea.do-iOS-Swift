@@ -80,7 +80,7 @@ class JobsViewModel: JobsVieModelInput, JobsViewModelOutput, JobsViewModelType {
         
         let firstRequest = Observable.combineLatest(isLoading, filterBy)
             .flatMapLatest { isLoading, filterBy -> Observable<[Job]> in
-                guard !isLoading else { return .empty() }
+                guard isLoading else { return .empty() }
                 return service.getJobs(page: 1, filterBy: filterBy)
         }
         

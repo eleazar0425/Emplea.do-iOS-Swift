@@ -38,6 +38,7 @@ class JobsTableViewCell: UITableViewCell {
     }
     
     func bind(job: Job){
+        self.titleLabel.text = job.title
         self.locationLabel.text = job.location
         self.companyLabel.text = job.company
         self.categoryLabel.text = job.category

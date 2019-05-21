@@ -21,9 +21,10 @@ extension UILabel {
             return
         }
         
-        let strLabelText = NSMutableAttributedString(string: txt)
-        strLabelText.append(attachmentString)
-        self.attributedText = strLabelText
+        let strLabelText = NSAttributedString(string: txt)
+        let mutableAttachmentString = NSMutableAttributedString(attributedString: attachmentString)
+        mutableAttachmentString.append(strLabelText)
+        self.attributedText = mutableAttachmentString
     }
     
     func removeImage() {
