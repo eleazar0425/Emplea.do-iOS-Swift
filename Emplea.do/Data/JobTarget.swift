@@ -16,7 +16,7 @@ enum JobTarget {
 extension JobTarget: TargetType {
     
     var defaultPageSize: Int {
-        return 12
+        return 20
     }
     
     var baseURL: URL {
