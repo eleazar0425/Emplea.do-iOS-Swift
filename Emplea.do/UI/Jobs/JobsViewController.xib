@@ -12,6 +12,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="JobsViewController" customModule="Emplea_do" customModuleProvider="target">
             <connections>
+                <outlet property="activityIndicatorView" destination="mEN-kQ-Zkk" id="JZI-OC-JwI"/>
                 <outlet property="tableView" destination="zHu-TM-22L" id="hQ7-4n-tqp"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
@@ -25,6 +26,23 @@
                     <rect key="frame" x="0.0" y="20" width="375" height="647"/>
                     <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                 </tableView>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="mEN-kQ-Zkk" customClass="NVActivityIndicatorView" customModule="NVActivityIndicatorView">
+                    <rect key="frame" x="162.5" y="308.5" width="50" height="50"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="50" id="cy0-jc-qcW"/>
+                        <constraint firstAttribute="width" constant="50" id="gj5-3W-Ys5"/>
+                    </constraints>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="color" keyPath="color">
+                            <color key="value" red="0.30980392159999998" green="0.68235294120000001" blue="0.72549019609999998" alpha="1" colorSpace="calibratedRGB"/>
+                        </userDefinedRuntimeAttribute>
+                        <userDefinedRuntimeAttribute type="number" keyPath="padding">
+                            <real key="value" value="0.0"/>
+                        </userDefinedRuntimeAttribute>
+                        <userDefinedRuntimeAttribute type="string" keyPath="typeName" value="ballScaleMultiple"/>
+                    </userDefinedRuntimeAttributes>
+                </view>
             </subviews>
             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <constraints>
@@ -32,6 +50,8 @@
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="zHu-TM-22L" secondAttribute="trailing" id="M38-cg-X4W"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="zHu-TM-22L" secondAttribute="bottom" id="Mth-A5-wmq"/>
                 <constraint firstItem="zHu-TM-22L" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" id="SyD-gf-WkP"/>
+                <constraint firstItem="mEN-kQ-Zkk" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="VqG-vv-nDt"/>
+                <constraint firstItem="mEN-kQ-Zkk" firstAttribute="centerY" secondItem="i5M-Pr-FkT" secondAttribute="centerY" id="dir-pJ-8Af"/>
             </constraints>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
         </view>

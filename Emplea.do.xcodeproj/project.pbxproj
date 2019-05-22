@@ -8,8 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		10877B40228DEA9900ED003C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10877B3F228DEA9900ED003C /* AppDelegate.swift */; };
-		10877B42228DEA9900ED003C /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10877B41228DEA9900ED003C /* ViewController.swift */; };
-		10877B45228DEA9900ED003C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 10877B43228DEA9900ED003C /* Main.storyboard */; };
 		10877B47228DEA9B00ED003C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 10877B46228DEA9B00ED003C /* Assets.xcassets */; };
 		10877B4A228DEA9B00ED003C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 10877B48228DEA9B00ED003C /* LaunchScreen.storyboard */; };
 		10877B55228DEA9C00ED003C /* Emplea_doTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10877B54228DEA9C00ED003C /* Emplea_doTests.swift */; };
@@ -47,8 +45,6 @@
 /* Begin PBXFileReference section */
 		10877B3C228DEA9900ED003C /* Emplea.do.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Emplea.do.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		10877B3F228DEA9900ED003C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		10877B41228DEA9900ED003C /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		10877B44228DEA9900ED003C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		10877B46228DEA9B00ED003C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		10877B49228DEA9B00ED003C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		10877B4B228DEA9B00ED003C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -128,8 +124,6 @@
 				10877B792294587E00ED003C /* UI */,
 				10877B66228DF3C100ED003C /* Util */,
 				10877B3F228DEA9900ED003C /* AppDelegate.swift */,
-				10877B41228DEA9900ED003C /* ViewController.swift */,
-				10877B43228DEA9900ED003C /* Main.storyboard */,
 				10877B46228DEA9B00ED003C /* Assets.xcassets */,
 				10877B48228DEA9B00ED003C /* LaunchScreen.storyboard */,
 				10877B4B228DEA9B00ED003C /* Info.plist */,
@@ -331,7 +325,6 @@
 				10877B7E229458AD00ED003C /* JobsViewController.xib in Resources */,
 				10877B4A228DEA9B00ED003C /* LaunchScreen.storyboard in Resources */,
 				10877B47228DEA9B00ED003C /* Assets.xcassets in Resources */,
-				10877B45228DEA9900ED003C /* Main.storyboard in Resources */,
 				10877B83229458C900ED003C /* JobsTableViewCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -361,6 +354,7 @@
 				"${BUILT_PRODUCTS_DIR}/ModelMapper/Mapper.framework",
 				"${BUILT_PRODUCTS_DIR}/Moya/Moya.framework",
 				"${BUILT_PRODUCTS_DIR}/Moya-ModelMapper/Moya_ModelMapper.framework",
+				"${BUILT_PRODUCTS_DIR}/NVActivityIndicatorView/NVActivityIndicatorView.framework",
 				"${BUILT_PRODUCTS_DIR}/Nuke/Nuke.framework",
 				"${BUILT_PRODUCTS_DIR}/Result/Result.framework",
 				"${BUILT_PRODUCTS_DIR}/RxCocoa/RxCocoa.framework",
@@ -377,6 +371,7 @@
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Mapper.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Moya.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Moya_ModelMapper.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/NVActivityIndicatorView.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Nuke.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Result.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxCocoa.framework",
@@ -471,7 +466,6 @@
 				10877B8A2294777A00ED003C /* JobsViewModel.swift in Sources */,
 				10877B7D229458AD00ED003C /* JobsViewController.swift in Sources */,
 				10877B65228DF3B300ED003C /* JobDataSource.swift in Sources */,
-				10877B42228DEA9900ED003C /* ViewController.swift in Sources */,
 				10877B69228DF3D500ED003C /* FilterBy.swift in Sources */,
 				10877B8E22958D6B00ED003C /* UIColor+HexString.swift in Sources */,
 				10877B922295912E00ED003C /* Constants.swift in Sources */,
@@ -506,14 +500,6 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		10877B43228DEA9900ED003C /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				10877B44228DEA9900ED003C /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		10877B48228DEA9B00ED003C /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (

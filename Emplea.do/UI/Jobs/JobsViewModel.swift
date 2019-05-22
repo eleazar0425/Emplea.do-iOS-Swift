@@ -95,6 +95,7 @@ class JobsViewModel: JobsVieModelInput, JobsViewModelOutput, JobsViewModelType {
             .flatMapLatest { [unowned self] loadMore, filterBy -> Observable<[Job]> in
                 guard loadMore else { return .empty() }
                 self.currentPage+=1
+                self.isLoadingProperty.onNext(true)
                 return self.service.getJobs(page: self.currentPage, filterBy: filterBy)
                     .flatMap{ result -> Observable<[Job]> in
                         switch result {

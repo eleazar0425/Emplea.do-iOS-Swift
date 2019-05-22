@@ -13,6 +13,7 @@ target 'Emplea.do' do
   pod 'RxCocoa'
   pod 'Nuke'
   pod 'RxDataSources'
+  pod 'NVActivityIndicatorView'
 
   target 'Emplea.doTests' do
     inherit! :search_paths

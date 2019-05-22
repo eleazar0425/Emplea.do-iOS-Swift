@@ -24,6 +24,9 @@ PODS:
     - RxSwift (~> 4.0)
   - Nimble (8.0.1)
   - Nuke (7.6.3)
+  - NVActivityIndicatorView (4.7.0):
+    - NVActivityIndicatorView/Presenter (= 4.7.0)
+  - NVActivityIndicatorView/Presenter (4.7.0)
   - Quick (2.1.0)
   - Result (4.1.0)
   - RxCocoa (4.5.0):
@@ -42,6 +45,7 @@ DEPENDENCIES:
   - Moya/RxSwift
   - Nimble
   - Nuke
+  - NVActivityIndicatorView
   - Quick
   - RxCocoa
   - RxDataSources
@@ -58,6 +62,7 @@ SPEC REPOS:
     - Moya-ModelMapper
     - Nimble
     - Nuke
+    - NVActivityIndicatorView
     - Quick
     - Result
     - RxCocoa
@@ -74,6 +79,7 @@ SPEC CHECKSUMS:
   Moya-ModelMapper: 4948625af7fc5eef41ad9fdfe0c3517170b50960
   Nimble: 45f786ae66faa9a709624227fae502db55a8bdd0
   Nuke: 44130e95e09463f8773ae4b96b90de1eba6b3350
+  NVActivityIndicatorView: b19ddab2576f805cbe0fb2306cba3476e09a1dea
   Quick: 4be43f6634acfa727dd106bdf3929ce125ffa79d
   Result: bd966fac789cc6c1563440b348ab2598cc24d5c7
   RxCocoa: cbf70265dc65a981d4ac982e513c10cf23df24a0
@@ -81,6 +87,6 @@ SPEC CHECKSUMS:
   RxSwift: f172070dfd1a93d70a9ab97a5a01166206e1c575
   RxTest: 3ccb66bfbace0bf7df1c43a7c75d046f8ce60372
 
-PODFILE CHECKSUM: 43bbb8fc20bbbb8d88f1abb15137fd4460fa1c7b
+PODFILE CHECKSUM: 29716daba826883c19ca96e3e0f433c2ba6a5b24
 
 COCOAPODS: 1.6.2

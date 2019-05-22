@@ -9,6 +9,7 @@
 import UIKit
 import RxSwift
 import RxCocoa
+import NVActivityIndicatorView
 
 class JobsViewController: UIViewController {
     
@@ -17,6 +18,7 @@ class JobsViewController: UIViewController {
     var disposeBag = DisposeBag()
     
     @IBOutlet weak var tableView: UITableView!
+    @IBOutlet weak var activityIndicatorView: NVActivityIndicatorView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -39,6 +41,16 @@ class JobsViewController: UIViewController {
             .skipUntil(outputs.isLoading)
             .bind(to: inputs.loadMore)
             .disposed(by: disposeBag)
+        
+        outputs.isLoading
+            .observeOn(MainScheduler.instance)
+            .subscribe( onNext: { [weak self] isLoading in
+                if isLoading {
+                    self?.activityIndicatorView.startAnimating()
+                }else {
+                    self?.activityIndicatorView.stopAnimating()
+                }
+            }).disposed(by: disposeBag)
     }
 
 }
