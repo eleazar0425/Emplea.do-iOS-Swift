@@ -35,7 +35,6 @@ class JobsViewController: UIViewController {
             cell.bind(job: job)
         }.disposed(by: disposeBag)
         
-        
         tableView.rx
             .reachedBottom()
             .skipUntil(outputs.isLoading)
@@ -51,6 +50,27 @@ class JobsViewController: UIViewController {
                     self?.activityIndicatorView.stopAnimating()
                 }
             }).disposed(by: disposeBag)
+        
+        let rightBarButton = UIBarButtonItem(image: UIImage(named: "filterIcon"), style: .plain, target: self, action: #selector(filterAction))
+        self.navigationItem.rightBarButtonItem = rightBarButton
     }
-
+    
+    @objc func filterAction(){
+        let actions = [ UIAlertController.AlertAction(title: "None", style: .default),
+                        UIAlertController.AlertAction(title: "Software Development", style: .default),
+                        UIAlertController.AlertAction(title: "Web Development", style: .default),
+                        UIAlertController.AlertAction(title: "Mobile Development", style: .default),
+                        UIAlertController.AlertAction(title: "Networking", style: .default),
+                        UIAlertController.AlertAction(title: "System Administrator", style: .default) ]
+        
+        UIAlertController.present(in: self, title: nil, message: nil, style: .actionSheet, actions: actions)
+            .flatMap { index -> Observable<FilterBy> in
+                let action = actions[index]
+                let filter = FilterBy(rawValue: action.title!.replacingOccurrences(of: " ", with: ""))!
+                return Observable.just(filter)
+            }.observeOn(MainScheduler.instance)
+            .subscribe( onNext: { [unowned self] filterBy in
+                self.viewModel.inputs.filterByAction.execute(filterBy)
+            }).disposed(by: disposeBag)
+    }
 }
