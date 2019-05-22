@@ -24,6 +24,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         let viewModel = JobsViewModel()
         
         jobsViewController.viewModel = viewModel
+        jobsViewController.title = "Emplea.do"
         
         let rootViewController = UINavigationController(rootViewController: jobsViewController)
         
@@ -31,7 +32,16 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         window?.makeKeyAndVisible()
         
+        setAppearance()
+        
         return true
+    }
+    
+    func setAppearance(){
+        UINavigationBar.appearance().barTintColor = UIColor.hexStringToUIColor(hex: "#4FAEB9")
+        UINavigationBar.appearance().tintColor = .white
+        UINavigationBar.appearance().titleTextAttributes = [NSAttributedString.Key.foregroundColor: UIColor.white]
+        UINavigationBar.appearance().isTranslucent = false
     }
 }
 
