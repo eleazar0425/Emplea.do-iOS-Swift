@@ -16,6 +16,7 @@ class JobsTableViewCell: UITableViewCell {
     @IBOutlet weak var categoryLabel: UILabel!
     @IBOutlet weak var publicationDateLabel: UILabel!
     @IBOutlet weak var remoteBadge: UIButton!
+    @IBOutlet weak var shadowView: UIView!
     
     
     override func awakeFromNib() {
@@ -23,6 +24,12 @@ class JobsTableViewCell: UITableViewCell {
         // Initialization code
         addLabelImages()
 
+        shadowView.layer.cornerRadius = 15.0
+        shadowView.layer.shadowColor = UIColor.gray.cgColor
+        shadowView.layer.shadowOffset = CGSize(width: 0.0, height: 0.0)
+        shadowView.layer.shadowRadius = 7.0
+        shadowView.layer.shadowOpacity = 0.3
+        
         remoteBadge.isHidden = true
     }
 
