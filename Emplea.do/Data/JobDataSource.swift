@@ -10,5 +10,5 @@ import Foundation
 import RxSwift
 
 protocol JobDataSource {
-    func getJobs(page: Int, filterBy: FilterBy) -> Observable<[Job]>
+    func getJobs(page: Int, filterBy: FilterBy) -> Observable<Result<[Job], String>>
 }

@@ -80,6 +80,15 @@ class JobsViewModel: JobsVieModelInput, JobsViewModelOutput, JobsViewModelType {
             .flatMapLatest { [unowned self] isLoading, filterBy -> Observable<[Job]> in
                 guard isLoading else { return .empty() }
                 return self.service.getJobs(page: self.currentPage, filterBy: filterBy)
+                    .flatMap{ result -> Observable<[Job]> in
+                        switch result {
+                        case let .sucess(jobs):
+                            return .just(jobs)
+                        case .error(_):
+                            self.isLoadingProperty.onNext(false)
+                            return .empty()
+                        }
+                    }
         }
         
         let nextRequest = Observable.combineLatest(loadMore, filterBy)
@@ -87,6 +96,15 @@ class JobsViewModel: JobsVieModelInput, JobsViewModelOutput, JobsViewModelType {
                 guard loadMore else { return .empty() }
                 self.currentPage+=1
                 return self.service.getJobs(page: self.currentPage, filterBy: filterBy)
+                    .flatMap{ result -> Observable<[Job]> in
+                        switch result {
+                        case let .sucess(jobs):
+                            return .just(jobs)
+                        case .error(_):
+                            self.isLoadingProperty.onNext(false)
+                            return .empty()
+                        }
+                }
         }
         
         jobs = Observable.merge(firstRequest, nextRequest)
