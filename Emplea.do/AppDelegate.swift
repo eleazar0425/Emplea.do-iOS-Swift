@@ -38,7 +38,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     }
     
     func setAppearance(){
-        UINavigationBar.appearance().barTintColor = UIColor.hexStringToUIColor(hex: "#4FAEB9")
+        UINavigationBar.appearance().barTintColor = UIColor.hexStringToUIColor(hex: Constants.Colors.primaryColor)
         UINavigationBar.appearance().tintColor = .white
         UINavigationBar.appearance().titleTextAttributes = [NSAttributedString.Key.foregroundColor: UIColor.white]
         UINavigationBar.appearance().isTranslucent = false

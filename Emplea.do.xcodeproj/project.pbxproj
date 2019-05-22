@@ -27,6 +27,8 @@
 		10877B8A2294777A00ED003C /* JobsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10877B892294777A00ED003C /* JobsViewModel.swift */; };
 		10877B8C22948C2A00ED003C /* UIScrollView+isNearBottomEdge.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10877B8B22948C2A00ED003C /* UIScrollView+isNearBottomEdge.swift */; };
 		10877B8E22958D6B00ED003C /* UIColor+HexString.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10877B8D22958D6B00ED003C /* UIColor+HexString.swift */; };
+		10877B9022958F6600ED003C /* BadgeButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10877B8F22958F6600ED003C /* BadgeButton.swift */; };
+		10877B922295912E00ED003C /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10877B912295912E00ED003C /* Constants.swift */; };
 		15E384213BA5717EDD624F88 /* Pods_Emplea_do.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 330FDC7CAED805B50E3F6105 /* Pods_Emplea_do.framework */; };
 		F4CE0091B7330601B160BFA7 /* Pods_Emplea_doTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CAFF8AE727D3F85A4B2CA93A /* Pods_Emplea_doTests.framework */; };
 /* End PBXBuildFile section */
@@ -66,6 +68,8 @@
 		10877B892294777A00ED003C /* JobsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JobsViewModel.swift; sourceTree = "<group>"; };
 		10877B8B22948C2A00ED003C /* UIScrollView+isNearBottomEdge.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIScrollView+isNearBottomEdge.swift"; sourceTree = "<group>"; };
 		10877B8D22958D6B00ED003C /* UIColor+HexString.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+HexString.swift"; sourceTree = "<group>"; };
+		10877B8F22958F6600ED003C /* BadgeButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BadgeButton.swift; sourceTree = "<group>"; };
+		10877B912295912E00ED003C /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		330FDC7CAED805B50E3F6105 /* Pods_Emplea_do.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Emplea_do.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		48C6F3FCDC48EA8277007FDF /* Pods-Emplea.doTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Emplea.doTests.release.xcconfig"; path = "Target Support Files/Pods-Emplea.doTests/Pods-Emplea.doTests.release.xcconfig"; sourceTree = "<group>"; };
 		BF240DC79CC4E28E8F78EC2E /* Pods-Emplea.do.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Emplea.do.release.xcconfig"; path = "Target Support Files/Pods-Emplea.do/Pods-Emplea.do.release.xcconfig"; sourceTree = "<group>"; };
@@ -155,6 +159,8 @@
 			children = (
 				10877B8422945B2400ED003C /* Extensions */,
 				10877B67228DF3C800ED003C /* Enums */,
+				10877B8F22958F6600ED003C /* BadgeButton.swift */,
+				10877B912295912E00ED003C /* Constants.swift */,
 			);
 			path = Util;
 			sourceTree = "<group>";
@@ -465,11 +471,13 @@
 				10877B42228DEA9900ED003C /* ViewController.swift in Sources */,
 				10877B69228DF3D500ED003C /* FilterBy.swift in Sources */,
 				10877B8E22958D6B00ED003C /* UIColor+HexString.swift in Sources */,
+				10877B922295912E00ED003C /* Constants.swift in Sources */,
 				10877B882294600600ED003C /* NibIndentifiable.swift in Sources */,
 				10877B61228DEC2000ED003C /* JobTarget.swift in Sources */,
 				10877B40228DEA9900ED003C /* AppDelegate.swift in Sources */,
 				10877B8622945B3500ED003C /* UILabel+AddImage.swift in Sources */,
 				10877B82229458C900ED003C /* JobsTableViewCell.swift in Sources */,
+				10877B9022958F6600ED003C /* BadgeButton.swift in Sources */,
 				10877B6C228DF5C700ED003C /* Job.swift in Sources */,
 				10877B63228DF37900ED003C /* JobService.swift in Sources */,
 			);
