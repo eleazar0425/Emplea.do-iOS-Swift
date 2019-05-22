@@ -50,12 +50,12 @@
                         <nil key="highlightedColor"/>
                     </label>
                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jEL-UI-8oi" customClass="BadgeButton" customModule="Emplea_do" customModuleProvider="target">
-                        <rect key="frame" x="260" y="158.5" width="55" height="20"/>
+                        <rect key="frame" x="261" y="158.5" width="54" height="20"/>
                         <constraints>
                             <constraint firstAttribute="height" constant="20" id="kfj-wf-VE1"/>
                         </constraints>
                         <fontDescription key="fontDescription" type="system" weight="medium" pointSize="15"/>
-                        <state key="normal" title="Remoto"/>
+                        <state key="normal" title="Remote"/>
                     </button>
                 </subviews>
                 <constraints>

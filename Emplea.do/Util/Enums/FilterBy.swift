@@ -10,7 +10,7 @@ import Foundation
 
 enum FilterBy: String {
     case
-    none = "NONE",
+    none = "None",
     softwareDevelopment = "SoftwareDevelopment",
     webDevelopment = "WebDevelopment",
     mobileDevelopment = "MobileDevelopment",

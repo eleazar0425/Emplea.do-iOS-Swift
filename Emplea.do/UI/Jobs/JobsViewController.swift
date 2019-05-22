@@ -66,7 +66,8 @@ class JobsViewController: UIViewController {
         UIAlertController.present(in: self, title: nil, message: nil, style: .actionSheet, actions: actions)
             .flatMap { index -> Observable<FilterBy> in
                 let action = actions[index]
-                let filter = FilterBy(rawValue: action.title!.replacingOccurrences(of: " ", with: ""))!
+                let rawValue = action.title!.replacingOccurrences(of: " ", with: "")
+                let filter = FilterBy(rawValue: rawValue)!
                 return Observable.just(filter)
             }.observeOn(MainScheduler.instance)
             .subscribe( onNext: { [unowned self] filterBy in
